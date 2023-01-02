@@ -1,6 +1,5 @@
 .input_field{
-  height: 150px;
-
+  margin-top: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,14 +13,15 @@
   border-radius: 7px;
 }
 
-.input_field>button {
-  padding: 20px 30px;
+.button_container>button {
+  padding: 10px 20px;
   border: 0;
   background-color: rgb(27, 95, 184);
   color: white;
   font-weight: 700;
-  border-radius: 7px;
+  border-radius: 5px;
   cursor: pointer;
+  width: fit-content;
 }
 
 .notelist_container{
@@ -29,5 +29,37 @@
   flex-wrap: wrap;
   gap: 15px;
   max-width: 70%;
-  margin: 0 auto;
+  margin: 50px auto 0 auto;
+}
+
+.take_a_note {
+
+  border: 1px solid gray;
+  padding: 5px 30px;
+  width: 500px;
+  border-radius: 7px;
+  font-weight: 500;
+  color: gray;
+  cursor: text;
+}
+
+.create_note_container{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid lightgrey;
+  border-radius: 7px;
+}
+
+.create_note_container>input{
+  outline: 0;
+  border: 0;
+  padding: 20px 30px;
+  width: 500px;
+  border-radius: 7px;
+}
+
+.button_container{
+  display: flex;
+  justify-content: end;
+  padding: 5px;
 }
