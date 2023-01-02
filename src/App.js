@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import Card from "./components/Card";
 
 function App() {
+  const [note, setNote] = useState("");
+  const [noteList, setNoteList] = useState([]);
+  function onSubmit() {
+    console.log(note);
+    setNoteList((prev) => [...prev, note]);
+  }
+  function onType(e) {
+    setNote(e.target.value);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="input_field">
+        <input onChange={onType} type="text" placeholder="Write a note" />
+        <button onClick={onSubmit}>Submit</button>
+      </div>
+      <div className="notelist_container">
+        {noteList.map((ele, index) => (
+        <Card key={index} note={ele}/>
+      ))}
+      </div>
+      
     </div>
   );
 }
