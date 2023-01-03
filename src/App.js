@@ -51,9 +51,16 @@ function App() {
         )}
       </div>
       <div className="notelist_container">
-        {noteList.map((ele,index) => 
-           <Card key={index} title={ele.title} note={ele.note} />
-        )}
+        {noteList.map((ele, index) => (
+          <Card
+            key={index}
+            index={index}
+            title={ele.title}
+            note={ele.note}
+            setNoteList={setNoteList}
+            noteList={noteList}
+          />
+        ))}
       </div>
     </div>
   );
