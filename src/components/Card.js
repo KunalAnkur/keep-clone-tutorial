@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import DeleteIcon from "@mui/icons-material/Delete";
+import EditIcon from "@mui/icons-material/Edit";
+import SubdirectoryArrowRightIcon from "@mui/icons-material/SubdirectoryArrowRight";
 import "./Card.css";
 function Card({ title, note, setNoteList, index, noteList }) {
   console.log(index);
@@ -50,13 +53,15 @@ function Card({ title, note, setNoteList, index, noteList }) {
 
       <div className="buttons">
         <button onClick={onDelete} className="delete_btn">
-          Delete
+          <DeleteIcon />
         </button>
         {show ? (
-          <button onClick={onSave}>save</button>
+          <button onClick={onSave}>
+            <SubdirectoryArrowRightIcon />
+          </button>
         ) : (
           <button onClick={onEdit} className="edit_btn">
-            Edit
+           <EditIcon />
           </button>
         )}
       </div>

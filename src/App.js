@@ -33,7 +33,7 @@ function App() {
     <div className="App">
       <div className="input_field">
         {show ? (
-          <div className="create_note_container">
+          <div className={`create_note_container`}>
             <input onChange={onTypeTitle} type={"text"} placeholder="Title" />
             <input
               onChange={onTypeNote}

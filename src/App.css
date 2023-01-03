@@ -1,3 +1,7 @@
+
+body {
+  background: url("./assets/bg1.jpg");
+}
 .input_field{
   margin-top: 50px;
   display: flex;
@@ -7,7 +11,6 @@
 }
 
 .input_field>input{
-  border: 1px solid gray;
   padding: 20px 30px;
   width: 500px;
   border-radius: 7px;
@@ -34,20 +37,25 @@
 
 .take_a_note {
 
-  border: 1px solid gray;
   padding: 5px 30px;
   width: 500px;
   border-radius: 7px;
   font-weight: 500;
   color: gray;
   cursor: text;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    backdrop-filter: blur(10px);
 }
 
 .create_note_container{
   display: flex;
   flex-direction: column;
-  border: 1px solid lightgrey;
   border-radius: 7px;
+    backdrop-filter: blur(10px);
+    color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
 
 .create_note_container>input{
@@ -56,6 +64,7 @@
   padding: 20px 30px;
   width: 500px;
   border-radius: 7px;
+  background: transparent;
 }
 
 .button_container{
