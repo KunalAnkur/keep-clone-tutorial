@@ -5,7 +5,6 @@ import Card from "./components/Card";
 function App() {
   const [title, setTitle] = useState("");
   const [note, setNote] = useState("");
-  const [noteDocument, setNoteDocument] = useState({});
   const [noteList, setNoteList] = useState([]);
 
   const [show, setShow] = useState(false);
@@ -15,7 +14,6 @@ function App() {
       title: title,
       note: note,
     };
-    setNoteDocument(newDocument);
     const array = [...noteList, newDocument];
     setNoteList(array);
   }
